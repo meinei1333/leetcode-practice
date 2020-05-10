@@ -1,0 +1,21 @@
+var array = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']];
+var result = [];
+function aa(i, str) {
+    if (i === array.length) {
+        if (str.length === array.length) {
+            result.push(str);
+        }
+        return;
+    }
+    digitIndex = 0;
+    var digitAr = array[i];
+    i++;
+    while (!(digitIndex === digitAr.length)) {
+        console.log(i, digitIndex);
+        str += digitAr[digitIndex];
+        digitIndex++;
+    }
+}
+aa(0, '');
+console.log('result:', result);
+
